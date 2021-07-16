@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Cat</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+    <div class="container bg-dark text-white" style="max-height:100%">
+        <!-- Header -->
+        <div class="row testing">
+            <div class="h1 my-2 ">Smelly Cat</div>
+            <div class="col"></div>
+            <div class="col-md-8 col-sm-12">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Search Cat" id="searchText">
+                    <button class="btn btn-outline-warning" type="button"
+                        onclick="searchCat(); return false">Search</button>
+                </div>
+            </div>
+            <div class="col ">
+                <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop" onclick="viewCat(); return false">
+                    Random Pic
+                </button>
+            </div>
+        </div>
+
+        <!-- Code for Displaying Modal content -->
+        <div class="modal fade text-dark" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Details</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="modalBody">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image Display -->
+        <div class="row m-5 text-md-center overflow-auto" id="content">
+        </div>
+    </div>
+</body>
+</html>
